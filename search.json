@@ -24,7 +24,7 @@
     "href": "index.html#getting-started",
     "title": "Tutorial 02",
     "section": "Getting started",
-    "text": "Getting started\n\nThese tutorials are designed to be comprehensive yet accessible. I recommend following along and grasping the statistical concepts as your top priority.\nYou will need to create your own Quarto (recommended) or R Markdown document to complete the exercises. In RStudio, go to\n\nFile -&gt; New File -&gt; Quarto Document... or\nFile -&gt; New File -&gt; R Markdown... and follow the intuitive prompts.\n\nFor those of you who are interested in furthering your data science skills and are keen to learn more, I have included optional sections.These techniques are not necessary for you to get through ENVX2001 – we do not cover code in the exams. Nevertheless these skills come handy in report writng and data analysis and can be a great addition to your projects.\nIf you have any suggestions for improvement, please let me know! Send me an email (you can find my details on Canvas).\n\nClick on the topics on the left to get started.",
+    "text": "Getting started\n\n\nIn some instances you will see notes like this one in the margin, which often contain useful tips or reminders.\n\nThese tutorials are designed to be comprehensive yet accessible. I recommend following along and grasping the statistical concepts as your top priority.\nYou will need to create your own Quarto (recommended) or R Markdown document to complete the exercises. In RStudio, go to\n\nFile -&gt; New File -&gt; Quarto Document... or\nFile -&gt; New File -&gt; R Markdown... and follow the intuitive prompts.\n\nFor those of you who are interested in furthering your data science skills and are keen to learn more, I have included optional sections.These techniques are not necessary for you to get through ENVX2001 – we do not cover code in the exams. Nevertheless these skills come handy in report writng and data analysis and can be a great addition to your projects.\nIf you have any suggestions for improvement, please let me know! Send me an email (you can find my details on Canvas).\n\nClick on the topics on the left to get started.",
     "crumbs": [
       "Welcome 👋"
     ]
@@ -107,6 +107,16 @@
     "text": "2.2 Practice\nUse this section to practice taking random samples from finite populations. Code is provided, but hidden by default for you to make comparisons with your own. Click on the “Show the code” button to reveal the code.\n\nGenerate 20 random points within a 100m x 100m study area.\n\n\n\nShow the code\nset.seed(1242)\nxcoord &lt;- runif(n = 20, min = 0, max = 100)\nycoord &lt;- runif(n = 20, min = 0, max = 100)\nsites &lt;- data.frame(xcoord, ycoord)\n\n\n\nNow this combines sample() and runif() functions. Use runif() to generate 100 data points between 10 and 20, and then use sample() to sample 20 of these points.\n\n\n\nShow the code\nset.seed(1242)\ndata &lt;- runif(n = 100, min = 10, max = 20)\nsampled_data &lt;- sample(data, size = 20)\n\n\n\nUse ggplot2 to plot a histogram of the sampled data generated in the previous step.\n\n\n\nShow the code\nlibrary(ggplot2)\nggplot(\n    data = data.frame(data = sampled_data),\n    aes(x = data)\n) +\n    geom_histogram(\n        binwidth = 0.5,\n        color = \"black\"\n    ) +\n    labs(\n        title = \"Histogram of sampled data\",\n        x = \"Value\",\n        y = \"Frequency\"\n    ) +\n    theme_bw()",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Sampling infinite populations</span>"
+    ]
+  },
+  {
+    "objectID": "done.html",
+    "href": "done.html",
+    "title": "3  Done!",
+    "section": "",
+    "text": "3.0.1 Thanks!\nThis is the end of the tutorial.\n\n\n\n\nIf you have any questions or suggestions, let me know during the lectures or via email. You know where to find me!",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Done!</span>"
     ]
   }
 ]
